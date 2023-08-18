@@ -6,7 +6,7 @@ const inter = Poppins({ subsets: ['latin'], weight: ["400", "500"] })
 
 export const metadata: Metadata = {
   title: 'Prainha 👙 :)',
-  description: 'Prainha :)',
+  description: 'Bora pra praiaaa',
 }
 
 export default function RootLayout({
