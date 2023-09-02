@@ -5,7 +5,7 @@ import { Poppins } from 'next/font/google'
 const inter = Poppins({ subsets: ['latin'], weight: ["400", "500"] })
 
 export const metadata: Metadata = {
-  title: 'Prainha 👙 :)',
+  title: 'Ubatuba 👙 :)',
   description: 'Bora pra praiaaa',
 }
 
@@ -20,3 +20,4 @@ export default function RootLayout({
     </html>
   )
 }
+

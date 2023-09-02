@@ -1,6 +1,6 @@
-"use client";
+'use client'
 import CountdownTimer from "@/components/CountDownTimer";
-import Image from "next/image";
+import Image from "next/image"
 export default function Home() {
   const targetDate = new Date("2023-09-06T22:00:00"); // Defina a data alvo da contagem regressiva
 
@@ -28,18 +28,7 @@ export default function Home() {
         <Image src={"/ro.png"} width={300} height={300} alt={"Ida"} />
         <Image src={"/le.png"} width={300} height={300} alt={"Ida"} />
         <Image src={"/sandro.png"} width={300} height={300} alt={"Ida"} />
-      </div>
-      <div>
-        <h1 className="text-4xl sm:text-2xl font-bold text-slate-50">Nossa Playlist</h1>
-        <iframe
-          // style="border-radius:12px"
-          src="https://open.spotify.com/embed/playlist/2LoTAcZAnrwxMMyjcdUq38?utm_source=generator"
-          width="100%"
-          height="352"
-          frameBorder="0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-        ></iframe>
+
       </div>
     </div>
   );
