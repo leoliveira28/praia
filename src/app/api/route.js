@@ -1,27 +1,26 @@
-// route.js
-// Import the necessary modules for SQLite
 import sqlite3 from "sqlite3";
-import { open } from "sqlite";
+import { open, Database } from "sqlite";
 
-// Initialize a variable to hold the SQLite database connection
+// Let's initialize it as null initially, and we will assign the actual database instance later.
 let db = null;
 
-// Handler for GET requests to retrieve all todos
+// Define the GET request handler function
 export async function GET(req, res) {
-  // Open a new connection if there is none
+  // Check if the database instance has been initialized
   if (!db) {
+    // If the database instance is not initialized, open the database connection
     db = await open({
-      filename: "./todo.db",
-      driver: sqlite3.Database,
+      filename: "./collection.db", // Specify the database file path
+      driver: sqlite3.Database, // Specify the database driver (sqlite3 in this case)
     });
   }
 
-  // Query to get all todos from the "todo" table
-  const todos = await db.all("SELECT * FROM todo");
+  // Perform a database query to retrieve all items from the "items" table
+  const items = await db.all("SELECT * FROM items");
 
-  // Return the todos as a JSON response with a 200 status code
-  return new Response(JSON.stringify(todos), {
-    headers: { "content-type": "application/json" },
+  // Return the items as a JSON response with status 200
+  return new Response(JSON.stringify(items), {
+    headers: { "Content-Type": "application/json" },
     status: 200,
   });
 }

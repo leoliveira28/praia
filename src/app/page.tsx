@@ -1,7 +1,11 @@
 'use client'
 import CountdownTimer from "@/components/CountDownTimer";
+import AddData from "@/components/Outgoing";
+import Outgoing from "@/components/Outgoing";
+
+import { Travelers } from "@/components/Travelers";
 import Image from "next/image"
-export default function Home() {
+export default function Home({gastos}) {
   const targetDate = new Date("2023-09-06T22:00:00"); // Defina a data alvo da contagem regressiva
 
   return (
@@ -20,15 +24,11 @@ export default function Home() {
           <CountdownTimer targetDate={targetDate} />
         </div>
       </div>
-      <div className="flex flex-col gap-5 items-center p-5">
-        <h1 className="text-4xl sm:text-2xl font-bold text-slate-50">
-          Viajantes
-        </h1>
-        <Image src={"/ida.png"} width={300} height={300} alt={"Ida"} />
-        <Image src={"/ro.png"} width={300} height={300} alt={"Ida"} />
-        <Image src={"/le.png"} width={300} height={300} alt={"Ida"} />
-        <Image src={"/sandro.png"} width={300} height={300} alt={"Ida"} />
-
+      <div>
+          <Travelers />
+      </div>
+      <div>
+        <AddData />
       </div>
     </div>
   );
