@@ -5,7 +5,7 @@ import Outgoing from "@/components/Outgoing";
 
 import { Travelers } from "@/components/Travelers";
 import Image from "next/image"
-export default function Home({gastos}) {
+export default function Home() {
   const targetDate = new Date("2023-09-06T22:00:00"); // Defina a data alvo da contagem regressiva
 
   return (
