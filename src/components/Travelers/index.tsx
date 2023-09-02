@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
 export const Travelers = () => {
   return (
     <div className="flex flex-col gap-5 items-center p-5">
